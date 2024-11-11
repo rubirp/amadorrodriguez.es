@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 
 ---
 
@@ -12,5 +14,6 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<Image src={"/assets/images/photo.png"} alt="Profile image" format="png" width="832" height="1256" />
 	</body>
 </html>
