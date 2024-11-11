@@ -1,0 +1,66 @@
+---
+import experiences from "../collections/experiences.json";
+import AboutExperience from "../components/about-experience.astro";
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="Sobre mí">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Sobre mí"
+      description="Hola 👋 soy Amador Ródriguez, un apasionado escritor de novelas que buscan explorar lo más profundo de la condición humana. Mi amor por la literatura comenzó desde muy joven, y a lo largo de los años he trabajado en perfeccionar mi estilo narrativo, creando historias que invitan a la reflexión y entretienen a la vez."
+      details="Mis influencias incluyen desde clásicos de la literatura hasta escritores contemporáneos, y cada obra que escribo está cargada de emoción, misterio y un toque de realismo mágico."
+    />
+
+    <img src="/assets/images/about.jpg" class="relative z-30 w-full my-10 rounded-xl" />
+
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Mis novelas
+    </h2>
+    <div class="px-5 py-10">
+      {
+        experiences.map((experience, loop) => {
+          return (
+            <>
+              {loop == 0 || loop == 1 ? (
+                <div class="pb-10 border-l border-gray-200 dark:border-neutral-700">
+                  <AboutExperience
+                    dates={experience.dates}
+                    role={experience.role}
+                    company={experience.company}
+                    description={experience.description}
+                    logo={experience.logo}
+                  />
+                </div>
+              ) : (
+                <AboutExperience
+                  dates={experience.dates}
+                  role={experience.role}
+                  company={experience.company}
+                  description={experience.description}
+                  logo={experience.logo}
+                />
+              )}
+            </>
+          )
+        })
+      }
+    </div>
+
+    <h2 class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200">Contactemos</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      Si deseas ponerte en contacto conmigo, escribeme en <a
+        href="https://www.facebook.com/amador.rodrigueznavalon"
+        target="_blank"
+        class="text-indigo-600 underline">facebook</a
+      >, o puedes enviarme un correo a <a href="mailto:amarodnav@live.com" class="text-indigo-600 underline"
+        >amarodnav@live.com</a
+      > y me aseguraré de responderte.
+    </p>
+  </section>
+</Layout>

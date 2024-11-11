@@ -1,0 +1,23 @@
+[
+	{
+		"dates": "Finales de 2025",
+		"role": "(Novela en proceso)",
+		"company": "N/A",
+		"description": "Novela con temática de misterio",
+		"logo": "/assets/images/experiences/todo.png"
+	},
+	{
+		"dates": "Noviembre 2024",
+		"role": "Memorias de una guerra silenciada",
+		"company": "Maluma",
+		"description": "Entre la guerra y el amor, la búsqueda de una identidad perdida",
+		"logo": "/assets/images/experiences/mgs.png"
+	},
+	{
+		"dates": "Noviembre 2022",
+		"role": "Salvá de Tejada: El homenaje",
+		"company": "Maluma",
+		"description": "Fanatismo, represión y el difícil camino hacia la libertad",
+		"logo": "/assets/images/experiences/sdt.png"
+	}
+]

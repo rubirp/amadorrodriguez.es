@@ -1,0 +1,18 @@
+[
+	{
+		"name": "Inicio",
+		"url": "/"
+	},
+	{
+		"name": "Libros",
+		"url": "/libros"
+	},
+	{
+		"name": "Escritos",
+		"url": "/escritos"
+	},
+	{
+		"name": "Sobre mí",
+		"url": "/sobre-mi"
+	}
+]
